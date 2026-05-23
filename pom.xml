@@ -10,12 +10,12 @@
     </parent>
 
     <properties>
-        <so-svg-version>0.0.7</so-svg-version>
+        <so-svg-version>0.0.8</so-svg-version>
     </properties>
 
     <groupId>org.vaadin.addons.so</groupId>
     <artifactId>so-vaadin-svg</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <name>An Enhanced SVG Component for Vaadin</name>
     <description>A component to enhance powerful SVG rendering capabilities in Vaadin applications.</description>
 

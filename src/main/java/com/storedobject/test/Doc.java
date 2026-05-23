@@ -32,7 +32,6 @@ public class Doc extends Div {
         Node doublePie = pie.duplicate().scale(2); // Duplicate it and scale it up
         doc.add(node);
         doc.add(doublePie);
-        System.err.println(doc);
         Svg svg = new Svg(doc);
         svg.setTooltip(pie, this::tooltip);
         svg.setTooltip(plot, this::tooltip);
