@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.storedobject</groupId>
+        <artifactId>so-vaadinpom</artifactId>
+        <version>24.10.0</version>
+    </parent>
+
+    <properties>
+        <so-svg-version>0.0.3</so-svg-version>
+    </properties>
+
+    <groupId>org.vaadin.addons.so</groupId>
+    <artifactId>so-vaadin-svg</artifactId>
+    <version>0.0.1</version>
+    <name>An Enhanced SVG Component for Vaadin</name>
+    <description>A component to enhance powerful SVG rendering capabilities in Vaadin applications.</description>
+
+    <organization>
+        <name>Syam Pillai</name>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <dependencies>
+        <!-- Java Servlet -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- SO SVG library -->
+        <dependency>
+            <groupId>com.storedobject</groupId>
+            <artifactId>so-svg</artifactId>
+            <version>${so-svg-version}</version>
+        </dependency>
+
+    </dependencies>
+</project>
