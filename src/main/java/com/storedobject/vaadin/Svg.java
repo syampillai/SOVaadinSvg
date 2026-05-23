@@ -329,13 +329,13 @@ public class Svg extends com.vaadin.flow.component.Svg {
                     } catch (NumberFormatException e) {
                         id = 0;
                     }
-                    valueId = id;
+                    nodeId = id;
                     try {
                         id = Long.parseLong(elementId.substring(i + 1));
                     } catch (NumberFormatException e) {
                         id = 0;
                     }
-                    nodeId = id;
+                    valueId = id;
                 }
             } else {
                 nodeId = valueId = 0;

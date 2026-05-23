@@ -5,24 +5,15 @@ import com.storedobject.svg.chart.Values;
 import com.storedobject.vaadin.Svg;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.page.AppShellConfigurator;
-import com.vaadin.flow.component.page.BodySize;
-import com.vaadin.flow.component.page.Push;
-import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.server.PWA;
-import com.vaadin.flow.shared.communication.PushMode;
-import com.vaadin.flow.theme.Theme;
-import com.vaadin.flow.theme.lumo.Lumo;
 
-@Route("")
-@PageTitle("SVG Test")
-public class Test extends Div {
+@Route("pie")
+public class MyPie extends Div {
 
     private final Pie pie = new Pie();
     private final Div tooltip = new Div();
 
-    public Test() {
+    public MyPie() {
         pie.addValue("Apples", 450);
         pie.addValue("Oranges", 270);
         pie.addValue("Bananas", 130);
@@ -32,6 +23,7 @@ public class Test extends Div {
         add(svg);
     }
 
+
     private Component tooltip(Svg.MouseOverEvent e) {
         if(e.getChart() != pie) {
             return null;
@@ -39,15 +31,5 @@ public class Test extends Div {
         Values.Value v = e.getValue();
         tooltip.setText(v == null ? "Pie chart" : (v.getLabel() + " = " + v.getValue()));
         return tooltip;
-    }
-
-    /**
-     * App shell.
-     */
-    @Push(PushMode.MANUAL)
-    @BodySize(height = "100vh", width = "100vw")
-    @Theme(themeClass = Lumo.class, variant = Lumo.LIGHT)
-    @PWA(name = "SO Application", shortName = "SO")
-    public static class AppShell implements AppShellConfigurator {
     }
 }
